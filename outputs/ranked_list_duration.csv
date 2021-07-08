@@ -1,0 +1,253 @@
+rank,code,total_coverage_ratio,description
+1,63400,0.3780821917808219,I/O module SW ver. Conflict
+2,8136,0.033707865168539325,Sec.Windspeed < expect  Icing
+3,1014,0.03317020119630234,Stopped for SW update
+4,1005,0.027332965212589728,Availability - low wind
+5,13906,0.02608695652173913,GEN. INV. COM. ERROR
+6,8108,0.023255813953488372,FT1 Sonic wind sensor error
+7,1022,0.01677962755807067,Local  scheduled service work
+8,63003,0.01572416406175997,Stop for powerdown
+9,5113,0.015067472472886829,Gridvolt.<lower limit4
+10,5210,0.014547546642557738,Gridfreq.<lower limit1
+11,5112,0.014432822508716452,Gridvolt.<lower limit3
+12,14111,0.014388489208633094,GenInv: 111 CAN2 warnings
+13,5104,0.01410808225729316,Low lower voltage exceeded
+14,13908,0.014084507042253521,INV. MODBUS. COM. ERROR
+15,13316,0.012345679012345678,Inv. Nac coolw. pres. sens err
+16,13117,0.01223128243143069,Charge main breaker cut out
+17,1015,0.01172966612737167,Manual idle stop
+18,1020,0.011340089665825264,Turbine in local operation
+19,14047,0.011235955056179775,GenInv: 47 D2 volt high
+20,5110,0.010758570386579139,Gridvolt.<lower limit1
+21,2006,0.0074936934263243795,DG:Local power limit  Siemens
+22,4301,0.007150368033648791,Inline filter warning
+23,5201,0.007100969402002632,Frequency on mains too low
+24,15111,0.006993006993006993,GrdInv: 111 CAN2 warnings
+25,1,0.0069348956776469186,Station is in Service Mode
+26,7,0.006872852233676976,Stopped due to grid error
+27,1007,0.0068621486798880645,Remote stop - Owner
+28,15001,0.0061667488899852,GrdInv: 1 interlock
+29,64001,0.005789899110858306,Grease level low  main bearing
+30,5200,0.0056657223796034,Frequency on mains too high
+31,-1,0.00547228801973161,
+32,8200,0.005205402363534046,Low suppltvolt. lightn. detec.
+33,5111,0.004903986555362702,Gridvolt.<lower limit2
+34,1024,0.004723346828609987,Local  customer / guest visit
+35,3199,0.00394563787812363,Orientation Stop -Out of range
+36,64059,0.003739249657235448,MV-breaker internal relay err.
+37,4306,0.003663003663003663,Inline (bef) press. sens.error
+38,11,0.0034545539423929787,Remote Stop Command is active
+39,8207,0.00333889816360601,Visibilitymeter sensor error
+40,1001,0.0033010901274374326,Manual stop
+41,9,0.003072593613599816,Stopped due to internal error. Manual reset is required
+42,13900,0.0029916089018606346,Converter tripped  general
+43,0,0.0029058538330087825,In operation: Generator on grid
+44,1018,0.002581550333216415,Stopped due to power up delay
+45,8185,0.002499604492959975,Many Wind Vane activations
+46,64053,0.0022032086934475003,MV-breaker tripped
+47,926,0.0020942408376963353,Software WatchDog tripped
+48,5122,0.0019842640327026807,FRT detected by grid module
+49,1023,0.0019743336623889436,Local  ad-hoc / repair work
+50,14302,0.0019588638589618022,GenInv: 302 Net Bridge Interl.
+51,8184,0.0019435646415202992,Many Anemometer activations
+52,3117,0.0018823150277586535,No lubrication  blade C
+53,3116,0.001801429330813301,No lubrication  blade B
+54,2,0.0017849126057418307,Station is in Error Mode
+55,64105,0.001639199363604953,AviLight  Red lantern failure
+56,8187,0.0015981735159817352,Primary wind vane failure
+57,8,0.0014844827887319023,Stopped due to internal error. Autoreset when error state has gone
+58,14038,0.001466275659824047,GenInv: 38 D1 volt high
+59,13310,0.0012405595494536866,Inv.(nac) coolwater pres. war
+60,13907,0.0011494252873563216,Grid INV. COM ERROR
+61,15183,0.0011363636363636363,GrdInv: 183 Unident. SMPS1
+62,15185,0.0011363636363636363,GrdInv: 185 Unident. D2
+63,15191,0.0011350737797956867,GrdInv: 191 Unident. D4
+64,15182,0.0011337868480725624,GrdInv: 182 Unident. D1
+65,15186,0.0011337868480725624,GrdInv: 186 Unident. SMPS2
+66,15189,0.0011325028312570782,GrdInv: 189 Unident. SMPS3
+67,15188,0.0011312217194570137,GrdInv: 188 Unident. D3
+68,3118,0.0010796221322537112,Grease level low  hub
+69,10200,0.0010395010395010396,Yaw lubrication not possible
+70,15038,0.0010183299389002036,GrdInv: 38 D1 volt high
+71,9110,0.0009276437847866419,Disc brake pump superheated
+72,63005,0.0009090909090909091,UPS Bypass error
+73,8171,0.0008507018290089324,Sec. Anemometer forced active
+74,8188,0.0008492569002123143,Secondary anemometer failure
+75,2200,0.0007765180928715639,Gen. bear. lub. not possible
+76,4314,0.0007476381431387208,IdleV.inact.Low gear oil press
+77,3200,0.0007469056764831413,Hub lubrication not possible
+78,63001,0.0007304601899196494,UPS battery failure
+79,8173,0.0007233273056057866,Sec. Vane forced active
+80,13294,0.0007057163020465773,Converter cooling dryer mode
+81,13311,0.0006963788300835655,Inv.(tow) coolwater pres. low
+82,15192,0.0006711409395973154,GrdInv: 192 Unident. SMPS4
+83,13295,0.0006574621959237344,Conv. cooling Nac Dryer mode
+84,14182,0.0006112469437652811,GenInv: 182 Unident. D1
+85,14188,0.0006112469437652811,GenInv: 188 Unident. D3
+86,14186,0.0006108735491753206,GenInv: 186 Unident. SMPS2
+87,14191,0.0006093845216331504,GenInv: 191 Unident. D4
+88,14185,0.0006093845216331504,GenInv: 185 Unident. D2
+89,14183,0.000608272506082725,GenInv: 183 Unident. SMPS1
+90,14189,0.000608272506082725,GenInv: 189 Unident. SMPS3
+91,14192,0.000607164541590771,GenInv: 192 Unident. SMPS4
+92,62011,0.0005652112477038293,Hour Counter Inconsistency
+93,9303,0.000564334085778781,Brakepressure too low
+94,13326,0.0005474452554744526,Nacel Conv. Cool. Water low
+95,8186,0.000538265805441378,Primary anemometer failure
+96,2124,0.0005241090146750524,Overspeed HCU
+97,64108,0.0004452359750667854,AviLight  OVP status
+98,4315,0.0003660768761439902,Gear oil idle filter blocked
+99,15324,0.0003284072249589491,GrdInv: 324 OV Trip1 - Instant
+100,3115,0.0002735304576164556,No lubrication  blade A
+101,2700,0.00023929169657812874,TwrFreq outside allowed window
+102,1025,0.0002114388413151496,Manual idle stop - yawing
+103,4201,0.00019747235387045813,Gear oil pump TOR
+104,3,0.00019459038723487057,No communication to turbine controller
+105,8110,0.00019430051813471502,FT1 Sonic wind sensor comm err
+106,9106,0.0001723543605653223,Brake (GEAR) temp.sensor error
+107,13902,0.00015969338869370808,Converter tripped  Auto Start
+108,13411,0.0001580652809610369,MCB cleaning in progresss
+109,9306,0.00012643823492224047,Brake acc. pressure too low
+110,13312,7.754342431761785e-05,Inv.(nac) coolwater pres. low
+111,5105,3.07836754169264e-05,Gridvolt.>upper limit1
+112,15006,0.0,GrdInv: 6 overtemperature
+113,1004,0.0,External stop
+114,1003,0.0,Emergency switch activated
+115,3405,0.0,Bad pitch calibration  blade A
+116,3407,0.0,Bad pitch calibration  blade C
+117,15133,0.0,GrdInv: 133 SFE mains freq.
+118,15016,0.0,GrdInv: 16 24V outp fail
+119,3411,0.0,Accumulator A check: timeout
+120,3406,0.0,Bad pitch calibration  blade B
+121,14213,0.0,GenInv: 213 Undiagnosed DELTA2
+122,916,0.0,HW-profile not selected
+123,14230,0.0,GenInv: 230 User alert 1
+124,3418,0.0,Loose Object Detected in Hub
+125,3412,0.0,Accumulator B check: timeout
+126,3413,0.0,Accumulator C check: timeout
+127,13909,0.0,DC Volt diviation too high
+128,13911,0.0,
+129,14016,0.0,GenInv: 16 24V outp fail
+130,14033,0.0,GenInv: 33 D1V curr. high
+131,4102,0.0,Gear oil temperature high
+132,14042,0.0,GenInv: 42 D2V curr. high
+133,14051,0.0,GenInv: 51 D3V curr. high
+134,14053,0.0,GenInv: 53 D3W curr. high
+135,1021,0.0,Manual stop owner
+136,4101,0.0,Gear oil temperature warning
+137,3429,0.0,
+138,3426,0.0,
+139,3422,0.0,Too many slip ring errors
+140,3419,0.0,Energy in DLO event exceeded
+141,3232,0.0,
+142,3404,0.0,Hub fan supply disconnected
+143,3146,0.0,Hub: No feedback MTS-sens C
+144,3208,0.0,Pitch pawl C Feedb. Stop
+145,63025,0.0,Smoke in the A3 box
+146,63101,0.0,Temperature in A1 too high
+147,63204,0.0,CAN:Hub module init. error
+148,63206,0.0,CAN:IO-2 Communication error
+149,63209,0.0,CAN:Hub Communication error
+150,63210,0.0,CAN:IO-4 module init. error
+151,63211,0.0,CAN:IO-4 Communication error
+152,63230,0.0,CAN Bus offline
+153,63303,0.0,IO module 2 powerdown detected
+154,5,0.0,Cable untwisting procedure active
+155,63412,0.0,Extreme hand terminal activity
+156,64000,0.0,No lubrication  main bearing
+157,4,0.0,Pitchlubrication procedure active
+158,64054,0.0,MV-breaker SF-6 pressure error
+159,3201,0.0,Orientation Stop -Failed
+160,3195,0.0,Edge Freq error on blade C
+161,63027,0.0,Smoke in the A18 box
+162,63020,0.0,Smoke in the inverter (nacell)
+163,3207,0.0,Pitch pawl B Feedb. Stop
+164,63017,0.0,Smoke in the A1 box
+165,3206,0.0,Pitch pawl A Feedb. Stop
+166,4103,0.0,HS-GEN gearbear. temp warning
+167,15213,0.0,GrdInv: 213 Undiagnosed DELTA2
+168,15227,0.0,GrdInv: 227 DSP ac overvoltage
+169,15261,0.0,GrdInv: 261 Delta 3 DIB +15v
+170,62004,0.0,IO Configuration error
+171,3205,0.0,Pitch pawl C Feedb. Operation
+172,63000,0.0,UPS-failure
+173,3204,0.0,Pitch pawl B Feedb. Operation
+174,3203,0.0,Pitch pawl A Feedb. Operation
+175,63004,0.0,UPS Battery Low
+176,3202,0.0,Orientation Stop -Rotor in pos
+177,63009,0.0,
+178,63014,0.0,Smoke in the nacell
+179,63016,0.0,Smoke in the inverter
+180,1034,0.0,Service Stop Hyd/Gear Pump/Fan
+181,13344,0.0,
+182,4106,0.0,HS-ROT Gearbearing superheated
+183,3173,0.0,Low oil pressure  blade C
+184,7123,0.0,Yaw hydr. temp. sensor error
+185,7126,0.0,Brake hydraulic filter warning
+186,8000,0.0,Windspeed too high to operate
+187,8131,0.0,Pri.Windspeed < expect  Icing
+188,4311,0.0,Gear oil press sensor error
+189,4307,0.0,Inline (aft) press. sens.error
+190,3193,0.0,Edge Freq error on blade A
+191,7120,0.0,Yaw hydraulic pump superheated
+192,4202,0.0,Gear oil blower TOR
+193,4127,0.0,Gearbear. IMS-GEN2 sens. warn.
+194,8203,0.0,Nacelle humidity high
+195,8205,0.0,Nacelle humidity sensor error
+196,2262,0.0,Generator overspeed stopped
+197,8311,0.0,GEN: Blw Cut-out spd  Max Wnd
+198,7122,0.0,Yaw hydraulic oil level low
+199,7114,0.0,Brake hyd oil level error
+200,9101,0.0,HS Brake lining too small
+201,3126,0.0,Pitch A tracking during stop
+202,3144,0.0,Hub: No feedback MTS-sens A
+203,3140,0.0,Valve supplyvoltage too low
+204,3130,0.0,Pitch Functionality Check
+205,3128,0.0,Pitch C tracking during stop
+206,3127,0.0,Pitch B tracking during stop
+207,5131,0.0,Too many FRT activations
+208,3123,0.0,Pitch A tracking during opera.
+209,7111,0.0,Hyd. for crane/cover activated
+210,3122,0.0,Hub pressureswitch error
+211,6100,0.0,RPM sensor error
+212,6102,0.0,LMU sensor error
+213,7100,0.0,Pitchhydraulics superheated
+214,7103,0.0,Hydraulic filter warning
+215,7106,0.0,Pitch pump. time too long stop
+216,8455,0.0,TCM-VS vibr planet high incr
+217,9107,0.0,Brake (GEN) temp.sensor error
+218,2137,0.0,Generator cooler superheated
+219,13309,0.0,Inv.(tow) coolwater pres. war
+220,13123,0.0,DC fuse blown  Invert. nacelle
+221,13132,0.0,Inv.(nacelle) temp. high
+222,13167,0.0,Inverter modbus com. error
+223,4123,0.0,Gear oil temp. sensor warning
+224,4122,0.0,Gear bear. HS-ROT sensor warn.
+225,13308,0.0,Inv. cool w (nac) vent. TOR.
+226,4121,0.0,Gear bear. HS-GEN sensor warn.
+227,4124,0.0,Gear bear. IMS-GEN sensor war.
+228,4112,0.0,Gearoil level too low
+229,13315,0.0,Inv. Tow coolw. pres. sens err
+230,2139,0.0,Gen. bearing (BALL) temp. high
+231,13325,0.0,Tower Conv. Cool. Water low
+232,4111,0.0,Gear oil pressure too high/low
+233,13345,0.0,
+234,13121,0.0,Gen. Inv. Communication error
+235,13110,0.0,DC fuse blown
+236,4126,0.0,Gear bear. HS-GEN2 sens. warn.
+237,10109,0.0,Wind vane blocked
+238,9111,0.0,Warning  Brake lining worn
+239,4125,0.0,Gear bear. IMS-ROT sensor war.
+240,9304,0.0,Brake pressure too high
+241,10100,0.0,Yaw motor(s) superheated
+242,10101,0.0,Yaw time limit exceeded
+243,10105,0.0,Stopped  untwisting cables
+244,10113,0.0,Yaw brake hyd. press. err.
+245,13106,0.0,Mainbreaker cut out
+246,10118,0.0,Yaw converter error
+247,3198,0.0,Orientation Stop -Succeeded
+248,10406,0.0,Too many yaw relay retries
+249,12112,0.0,Transformer oil level too low
+250,12120,0.0,Transfo. oil pressure too high
+251,12141,0.0,TOR transformer oil pump
+252,3197,0.0,Orientation Stop -Started
