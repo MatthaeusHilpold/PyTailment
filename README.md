@@ -7,4 +7,4 @@ This repository contains:
   - a small CLI to run the functions
   - a commented jupyter notebook walking the user through the process of curtailment detection and analysis, with numerous explanations and experiments with different settings and configurations
   - sample data folder
-  - sample output folder
+  - sample output folder (does not contain curtailment output, as it is too big. You will have to run it yourself ;) )
