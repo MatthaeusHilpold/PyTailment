@@ -31,6 +31,7 @@ if __name__ == "__main__":
                                                                                 alarmfile)
     additional_flags = True
     fill_missing_data = True
+    fill_rated = False
     count_zero_as_curtailment = True
     difference_ratio = 0.1
     print('This is a small CLI for the PyTailment library')
@@ -52,11 +53,14 @@ if __name__ == "__main__":
         var = input("fill missing (NaN) values with 0? ")
         if var not in ['True', 'yes', 'y']:
             fill_missing_data = False
+        var = input("fill missing (NaN) values with rated power? ")
+        if var in ['True', 'yes', 'y']:
+            fill_rated = True
         var = input("Should 0 be counted as curtailment? ")
         if var not in ['True', 'yes', 'y']:
             count_zero_as_curtailment = False
         print("controller induced curtailments tend to oscillate...")
-        var = input("...how much difference should be counted as a new curtailment event?")
+        var = input("...how much difference should be counted as a new curtailment event? ")
         if var in ['True', 'yes', 'y']:
             difference_ratio = True
 
@@ -85,8 +89,13 @@ if __name__ == "__main__":
     root = "outputs/"
 
     curtailments, timeseries = PyTailment.extract_curtailment_windows(SCADA_setpoint, additional_flags=True,
-                                fill_missing_data=fill_missing_data, count_zero_as_curtailment=count_zero_as_curtailment, SCADA_wind=SCADA_wind,
-                                curtailment_reports=curtailment_reports, turbine_events=turbine_events, difference_ratio=difference_ratio)
+                                                                      fill_missing_data=fill_missing_data,
+                                                                      count_zero_as_curtailment=count_zero_as_curtailment,
+                                                                      missing_as_rated=fill_rated,
+                                                                      SCADA_wind=SCADA_wind,
+                                                                      curtailment_reports=curtailment_reports,
+                                                                      turbine_events=turbine_events,
+                                                                      difference_ratio=difference_ratio)
 
     with open(root+"curtailments.pkl", "wb") as f:
         pickle.dump(curtailments, f)

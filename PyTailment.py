@@ -407,6 +407,7 @@ def extract_curtailment_windows(SCADA_setpoint: pd.DataFrame,
                                 count_zero_as_curtailment=False,
                                 additional_flags=False,
                                 fill_missing_data=False,
+                                missing_as_rated=False,
                                 SCADA_wind=None,
                                 curtailment_reports=None,
                                 turbine_events=None):
@@ -438,6 +439,9 @@ def extract_curtailment_windows(SCADA_setpoint: pd.DataFrame,
         turbine_events: turbine event data for all turbines, only necessary if
         additional_flags is set
 
+        missing_as_rated: if True, missing setpoint values will be treated as
+        operations, i.e. they will be set to rated power
+
     Returns:
         list of dataframes with curtailment events per turbine and list of
         dataframes of flagged timeseries per turbine
@@ -445,8 +449,19 @@ def extract_curtailment_windows(SCADA_setpoint: pd.DataFrame,
 
     setpoint = SCADA_setpoint
     max_val = setpoint['Value'].max()
+
+    # If missing data has to be filled
     if fill_missing_data:
-        setpoint = setpoint.pivot_table(index=['Timestamp'], columns=['Turbine'], fill_value=0)
+
+        # Default: fill with zeros
+        if missing_as_rated:
+            setpoint = setpoint.pivot_table(index=['Timestamp'], columns=['Turbine'], fill_value=max_val)
+
+        # Optionally: fill with rated power: business as usual
+        else:
+            setpoint = setpoint.pivot_table(index=['Timestamp'], columns=['Turbine'], fill_value=0)
+
+    # Otherwise: don't fill missing data
     else:
         setpoint = setpoint.pivot_table(index=['Timestamp'], columns=['Turbine'])
     setpoint = setpoint.stack().swaplevel(i='Turbine', j='Timestamp')
@@ -781,7 +796,7 @@ def compute_duration_coverage(turbine_curtailments: pd.DataFrame, turbine_events
     return covered_ratio_data
 
 
-def daily_density_events_by_mutual_information(turbine_curtailments: pd.DataFrame, turbine_events: pd.DataFrame):
+def daily_density_events_by_mutual_information(turbine_curtailments: pd.DataFrame, turbine_events: pd.DataFrame, repeats=10):
     """
     Compute mutual information scores for events based on daily density
 
@@ -809,7 +824,7 @@ def daily_density_events_by_mutual_information(turbine_curtailments: pd.DataFram
     end = turbine_curtailments_list[0].index.max().floor(freq='24H')
     nrdays = (end - start).days
 
-    repeater = np.zeros((len(codes), len(turbine_curtailments_list)))
+    repeater = np.zeros((len(codes), len(turbine_curtailments_list), repeats))
 
     indexnames = [start + timedelta(days=day) for day in range(nrdays)]
 
@@ -843,10 +858,14 @@ def daily_density_events_by_mutual_information(turbine_curtailments: pd.DataFram
         currentcurt['Y_Coverage_Ratio'] = 0
         efficient_event_overlap_calculation(currentcurt, turbine_curtailments)
 
-        repeater[:, i] = mutual_info_classif(current, currentcurt.Y_Coverage_Duration)
+        for repeat in range(repeats):
+            repeater[:, i, repeat] = mutual_info_classif(current, currentcurt.Y_Coverage_Duration)
+
         i += 1
 
-    result = repeater.mean(axis=1)
+    avg_turbine_result = repeater.mean(axis=2)
+    result = avg_turbine_result.mean(axis=1)
+
     ranked_list = pd.DataFrame(data=0, index=codes, columns=['mutual information scores'])
     ranked_list['mutual information scores'] = result
     ranked_list['code'] = ranked_list.index
