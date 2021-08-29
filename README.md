@@ -3,7 +3,7 @@
 A tool for curtailment detection and analysis.
 
 This repository contains:
-  - the PyTailment library
+  - the PyTailment library (Containing the commented functions for the pipeline)
   - a small CLI to run the functions
   - a commented jupyter notebook walking the user through the process of curtailment detection and analysis, with numerous explanations and experiments with different settings and configurations
   - sample data folder
