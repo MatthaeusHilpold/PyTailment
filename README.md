@@ -1,6 +1,6 @@
 # PyTailment
 
-A tool for curtailment detection and analysis.
+A tool for curtailment detection and analysis on wind turbines.
 
 This repository contains:
   - the PyTailment library (Containing the commented functions for the pipeline)
